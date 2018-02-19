@@ -25,6 +25,10 @@ namespace VoorbeeldWeek2
                 app.UseDeveloperExceptionPage();
             }
 
+            //Altijd voor app.Run !!!!
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");
